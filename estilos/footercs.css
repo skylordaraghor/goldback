@@ -1,0 +1,30 @@
+footer{
+    background-color: black;
+    text-align: center;
+    color: white;
+
+    margin-top:100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width:1020px)
+{
+    footer{
+        font-size: 2.0vmax;
+    }
+    
+}
+@media only screen and (max-width:370px)
+{
+    footer{
+        font-size: 1.5vmax;
+    }
+    
+}
+

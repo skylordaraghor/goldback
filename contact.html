@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/contaccs.css">
+    <link rel="stylesheet" href="./estilos/navbarcs.css">
+    <link rel="stylesheet" href="./estilos/footercs.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container logo-nav-container">
+                <a href="./index.html" ><img src="./imagenes/simbolo.jpg" alt=""></a> 
+            <nav class="navigation">    
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalogo.html">Productos</a></li>
+                    <li><a href="contact.html">Contacto</a></li>            
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <fieldset style="background-color: blanchedalmond;">
+    <p>
+       <p>
+        Contacto via telefono:
+       </p> 
+        <p>
+            <legend>Seleccione su region para la informacion del representante local</legend>
+            <select name="region" id="region_tel">
+                <option value="Buenos Aires">Buenos Aires</option>
+                <option value="Capital Federal">Capital Federal</option>
+                <option value="Cordoba">Cordoba</option>
+            </select>
+        </p>
+        <!-- cuando selecciona le aparece una imagen con la informacion de contacto de esa  -->
+    </p>
+    </fieldset>
+    <fieldset style="background-color: blanchedalmond;">
+    <p>
+        Contacto via email:       
+    </p>
+    <p>
+        Enviar feedback a:
+        <select name="region" id="region_mail">
+            <option value="Buenos Aires">Buenos Aires</option>
+            <option value="Capital Federal">Capital Federal</option>
+            <option value="Cordoba">Cordoba</option>
+        </select>
+    </p>
+    <p>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" name="nombre" id="nombre" placeholder="Escriba aqui su nombre" maxlength="30" autocomplete="off" >
+    </p>
+    <p>
+        <label for="email">Correo: <input type="email" name="correo" id="email" placeholder="Escriba aqui su direccion de correo electronico"> </label>
+    
+    </p>
+    <p>
+        <label for="numero_envio">Número de envio (opcional):</label>
+        <input type="number" name="numero_envio" id="numero_envio" placeholder="Numero envio" maxlength="8" autocomplete="off" >
+    </p>
+    <p>
+        Consulta (hasta 250 caracteres)<br>
+        <textarea name="consulta" cols="30" width="30" maxlength="250"></textarea>
+    </p>
+    <p>
+        <form name="formulario" method="post" action="/send.php">
+            <!-- Botones de opción para el asunto del mail de reclamo -->
+            <p>
+              Razon del contacto:
+                <ul>
+                    <li><input type="radio" name="reclamo" value="R" /> Reclamo</li>
+                    <li><input type="radio" name="reclamo" value="I" /> Informacion</li>
+                    <li><input type="radio" name="reclamo" value="E" /> Estado de envio</li>
+                    <li><input type="radio" name="reclamo" value="O" /> Otro</li>
+                </ul>
+
+            </p>
+            <p>
+                ¿Eres cliente particular?
+                <input type="checkbox" name="tipocliente" checked />
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Borrar">
+            </p>        
+        </form>
+    </p>
+    </fieldset>
+
+ 
+    <footer>
+        <p>Derechos Reservados 2022</p>
+    </footer>
+</body>
+</html>

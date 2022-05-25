@@ -78,7 +78,7 @@ body{
     border: 0.2px solid black;
 }
 .boton:hover{
-    box-shadow: 2.5px 2.5px 2.5px grey;
+    
 }
 .boton:active{
     transform: scale(0.98);

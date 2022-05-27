@@ -22,6 +22,7 @@ h2{
     overflow: hidden;
 
     padding-top: 4rem;
+
     display: grid;
     grid-template-columns: repeat(12,minmax(0,1fr));
     grid-template-rows: auto auto;
@@ -83,18 +84,28 @@ select{
     justify-content: space-between;
     flex-direction: column;
 }
-#contacto{
+.contacto{
+    grid-column-start: 2;
+    grid-column-end: 12;
+
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background-color: #f2f4f0;
+    border-radius: 30px;
+    padding: 1.3rem;
+    opacity: 150;
+
 }
 #info-contacto{
 
 }
 #contratar{
-    grid-column-start: 6;
-    grid-column-end: 8;
+    grid-column-start: 5;
+    grid-column-end: 9;
     list-style: none;
+    margin: auto;
     
     display: flex;
     flex-direction: column;
@@ -103,7 +114,7 @@ select{
     
 }
 #izq-contratar{
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-column-end: 5;
     grid-row-start: 1;
     transition: all 1s;
@@ -119,7 +130,7 @@ select{
 }
 #der-contratar{
     grid-column-start: 9;
-    grid-column-end: 11;
+    grid-column-end: 12;
     transition: all 1s;
     border-radius: 25px;
     border: 1px solid grey;
@@ -131,19 +142,14 @@ select{
     align-items: flex-start;
     
 }
-#contacto{
-    grid-column-start: 4;
-    grid-column-end: 7;
-    grid-row-start: 1;
-    text-align: center;
-}
 #mapa{
     grid-column-start: 8;
-    grid-column-end: 10;
+    grid-column-end: 12;
     grid-row-start: 1;
-    overflow:hidden;
-    height:300px;
-    width:400px;
+    
+    min-height: 250px;
+    max-height:300px;
+    max-width:400px;
 }
 #ul-contratar, #ul-suscripcion, #ul-pago{
     list-style-type: none;
@@ -155,3 +161,55 @@ select{
     line-height: 2.3rem;
 }
 
+@media only screen and (max-width:1020px)
+{
+    #contacto{
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        text-align: center;
+    }
+    #mapa{
+        grid-column-start: 7;
+        grid-column-end: 8;
+        grid-row-start: 1;   
+    }
+}
+@media only screen and (max-width:672px)
+{
+      .secundario{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 3.8rem;
+      }
+      .contacto{
+            flex-direction: column;
+            flex-wrap: wrap;
+            row-gap: 3.8rem;
+            width: 100%;
+      }
+      #preguntas{
+            align-items: center;
+            justify-content: center
+      }
+      #consulta{
+          width: 350px;
+      }
+      #der-contratar{
+          align-items: center;
+      }
+      #izq-contratar{
+        align-items: center;
+      }
+}
+@media only screen and (max-width:368px)
+{
+    body{
+        padding-top: 15.3rem;
+    }
+    #consulta{
+        width: 150px;
+        height: auto;
+    }
+}

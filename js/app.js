@@ -11,8 +11,7 @@ function modificacionpagina(){
             document.getElementById("der-contratar").style.display="none";
             document.getElementById("asidepreguntas").style.display="flex";
             document.getElementById("preguntas").style.display="flex";
-            document.getElementById("contacto").style.display="none";
-            document.getElementById("mapa").style.display="none";           
+            document.getElementById("contacto").style.display="none";        
             break;
         case 'contratar':
             document.getElementById("contratar").style.display="flex";
@@ -21,7 +20,6 @@ function modificacionpagina(){
             document.getElementById("asidepreguntas").style.display="none";
             document.getElementById("preguntas").style.display="none";
             document.getElementById("contacto").style.display="none";
-            document.getElementById("mapa").style.display="none";
             break;
         case 'contacto':
             document.getElementById("contratar").style.display="none";
@@ -30,7 +28,6 @@ function modificacionpagina(){
             document.getElementById("asidepreguntas").style.display="none";
             document.getElementById("preguntas").style.display="none";
             document.getElementById("contacto").style.display="flex";
-            document.getElementById("mapa").style.display="initial";
             break;
         default:
             window.alert("no deberia estar aqui");

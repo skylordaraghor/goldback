@@ -160,21 +160,6 @@ select{
     padding-right: 2.8rem;
     line-height: 2.3rem;
 }
-
-@media only screen and (max-width:1020px)
-{
-    #contacto{
-        grid-column-start: 3;
-        grid-column-end: 6;
-        grid-row-start: 1;
-        text-align: center;
-    }
-    #mapa{
-        grid-column-start: 7;
-        grid-column-end: 8;
-        grid-row-start: 1;   
-    }
-}
 @media only screen and (max-width:672px)
 {
       .secundario{

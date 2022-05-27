@@ -1,9 +1,157 @@
 body{
     margin:0;
-    background-color: #f2f4f6;
+    background-color: white;
     font-family: 'Montserrat', sans-serif, 'Poppins',serif;
     color:#333;
-    font-size: 1.3 rem;
+    
     line-height: 1.4em;
     font-weight: 750;
+    padding-top: 13rem;
 }
+h2{
+    padding-top: 1rem;
+    align-self: center;
+}
+.principal{
+    width: 95%;
+    margin: auto;
+    max-width: 1125px;
+}
+.secundario{
+    width: 100%;
+    overflow: hidden;
+
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(12,minmax(0,1fr));
+    grid-template-rows: auto auto;
+}
+
+label{
+    margin: 8px;
+}
+input[type=text]{
+    max-width: 200px;
+    max-height: 25px;
+    background-color: #fefeff;
+    padding-top: 0.25rem;
+    font-family: 'Montserrat', sans-serif, 'Poppins',serif;
+    font-weight: 650;
+}
+input[type=number]{
+    max-width: 280px;
+    max-height: 25px;
+    background-color: #fefeff;
+    padding: 0.25rem;
+    font-family: 'Montserrat', sans-serif, 'Poppins',serif;
+    font-weight: 650;
+}
+#consulta{
+    min-height: 4rem;
+    max-height: 10rem;
+    background-color: #fefeff;
+    font-family: 'Montserrat', sans-serif, 'Poppins',serif;
+    font-weight: 600;
+    text-align: left;
+}
+select{
+    width: 280px;
+    height: 25px;
+    background-color: #fefeff;
+    padding: 0.25rem;
+    font-family: 'Montserrat', sans-serif, 'Poppins',serif;
+    font-weight: 650;
+}
+#preguntas{
+    grid-column-start: 3;
+    grid-column-end: 7;
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    
+}
+#asidepreguntas{
+    grid-column-start: 8;
+    grid-column-end: 12;
+    background-color: grey;
+    padding: 1rem;
+    border-radius: 20px;
+    color: #f2f4f0;
+    
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#contacto{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+#info-contacto{
+
+}
+#contratar{
+    grid-column-start: 6;
+    grid-column-end: 8;
+    list-style: none;
+    
+    display: flex;
+    flex-direction: column;
+    
+    align-items: flex-start;
+    
+}
+#izq-contratar{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    transition: all 1s;
+    border-radius: 25px;
+    border: 1px solid grey;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    align-items: flex-start;
+    
+}
+#der-contratar{
+    grid-column-start: 9;
+    grid-column-end: 11;
+    transition: all 1s;
+    border-radius: 25px;
+    border: 1px solid grey;
+    
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;   
+    align-items: flex-start;
+    
+}
+#contacto{
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    text-align: center;
+}
+#mapa{
+    grid-column-start: 8;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    overflow:hidden;
+    height:300px;
+    width:400px;
+}
+#ul-contratar, #ul-suscripcion, #ul-pago{
+    list-style-type: none;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-right: 2.8rem;
+    line-height: 2.3rem;
+}
+

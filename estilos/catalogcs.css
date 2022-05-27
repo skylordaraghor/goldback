@@ -110,6 +110,7 @@ body{
     padding: 3rem;
     text-align: center;
     font-size: 1.3vmax;
+    line-height: 2rem;
     
     display: flex;
     flex-direction: column;

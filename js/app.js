@@ -187,7 +187,7 @@ function revisar(){
                  return false;    
              }    
         }
-        if (dondeestoy=='consultar')
+        if (dondeestoy=='consulta')
         {   
             if(!validarnombre(dondeestoy) || !validarapellido(dondeestoy) || !validaremail(dondeestoy)|| !validarconsulta(dondeestoy) ){
                 document.getElementById('nose').innerHTML="Verifique el formulario para enviarlo";

@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/844a4f6069.js" crossorigin="anonymous"></script>
+    <script defer src="./js/app.js"></script>
 </head>
 <body >
     <header class="header">   
@@ -21,7 +23,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="catalogo.html">Productos</a></li>
-                    <li><a href="contact.html">Contacto</a></li>            
+                    <li><a href="contact.html" >Contacto</a></li>            
                 </ul>
             </nav>
         </div>
@@ -31,23 +33,27 @@
                         <h2>Professional lerner</h2>
                         <p>El paquete inicial para conocernos, tanto al equipo profesional de GBT como las herramientas que manejamos totalmente sin cargo</p>
                         <ul class="info-plan">
-                            <li>FREE!!</li>
-                            <li>5 Alertas</li>
-                            <li>Acceso al canal de traders</li>
+                            <li><i class="fa-solid fa-check"></i>  FREE!!</li>
+                            <li><i class="fa-solid fa-check"></i>  5 Alertas</li>
+                            <li><i class="fa-solid fa-check"></i>  Acceso al canal de traders</li>
                         </ul>
-                        <button class="boton">SUSCRIBIRSE</button>  
+                        <form id="suscripcion-free" method="get" action="./contact.html">
+                            <input type="submit" value="SUSCRIBIRSE" name="suscripcion-free">
+                        </form>
                     </div>
 
                     <div class="vip">
                             <h2>VIP Golden club</h2>
                             <p>EL paquete premium posee la mejor cantidad de alertas con un 90% de aciertos, asistencia 24/7 con nuestro equipo de expertos y acceso al Royal Group de GBT</p>
                         <ul class="info-plan">
-                            <li>7 usd</li>
-                            <li>25 Alertas</li>
-                            <li>Acceso al canal de traders y el canal VIP</li>
-                            <li>Beneficios de Referidos</li>
+                            <li><i class="fa-solid fa-check"></i>  7 usd</li>
+                            <li><i class="fa-solid fa-check"></i>  25 Alertas</li>
+                            <li><i class="fa-solid fa-check"></i>  Acceso al canal de traders y el canal VIP</li>
+                            <li><i class="fa-solid fa-check"></i>  Beneficios de Referidos</li>
                         </ul>
-                        <button class="boton">SUSCRIBIRSE</button>
+                        <form id="suscripcion-vip" method="get" action="./contact.html">
+                            <input type="submit" value="SUSCRIBIRSE" name="suscripcion-vip">
+                        </form>
                     </div>
     </section>
     <article class="barra-producto">

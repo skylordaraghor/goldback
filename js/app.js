@@ -187,12 +187,12 @@ function revisar(){
                  return false;    
              }    
         }
-        if (dondeestoy=='consultar')
-        { 
+        if (dondeestoy=='consulta')
+        {   
             if(!validarnombre(dondeestoy) || !validarapellido(dondeestoy) || !validaremail(dondeestoy)|| !validarconsulta(dondeestoy) ){
                 document.getElementById('nose').innerHTML="Verifique el formulario para enviarlo";
                 return false;    
-            }    
+          }
         }
         window.location.replace(window.location.href.substring(0,window.location.href.length-13) + '/index.html');
         return true;

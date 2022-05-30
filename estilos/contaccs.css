@@ -26,6 +26,7 @@ h2{
     display: grid;
     grid-template-columns: repeat(12,minmax(0,1fr));
     grid-template-rows: auto auto;
+    row-gap: 45px;
 }
 
 label{
@@ -47,7 +48,24 @@ input[type=number]{
     font-family: 'Montserrat', sans-serif, 'Poppins',serif;
     font-weight: 650;
 }
-#consulta{
+input[type=button]{
+    min-width: 150px;
+    
+    min-height: 25px;
+    background-color: #fefeff;
+    
+    font-family: 'Montserrat', sans-serif, 'Poppins',serif;
+    font-weight: 400;
+}
+input[type=reset]{
+    min-width: 150px;
+    min-height: 25px;
+    background-color: #fefeff;
+    
+    font-family: 'Montserrat', sans-serif, 'Poppins',serif;
+    font-weight: 400;
+}
+#consulta-box{
     min-height: 4rem;
     max-height: 10rem;
     background-color: #fefeff;
@@ -66,12 +84,23 @@ select{
 #preguntas{
     grid-column-start: 3;
     grid-column-end: 7;
-    
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-direction: column;
     
 }
+#form-consulta{
+    grid-column-start: 3;
+    grid-column-end: 7;
+    
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+span{
+    color: red;
+}
+
 #asidepreguntas{
     grid-column-start: 8;
     grid-column-end: 12;
@@ -96,10 +125,6 @@ select{
     border-radius: 30px;
     padding: 1.3rem;
     opacity: 150;
-
-}
-#info-contacto{
-
 }
 #contratar{
     grid-column-start: 5;
@@ -125,7 +150,7 @@ select{
     justify-content: space-evenly;
     flex-direction: column;
     text-align: center;
-    align-items: flex-start;
+    align-items: center;
     
 }
 #der-contratar{
@@ -139,7 +164,7 @@ select{
     justify-content: space-evenly;
     flex-direction: column;
     text-align: center;   
-    align-items: flex-start;
+    align-items: center;
     
 }
 #mapa{
@@ -160,7 +185,23 @@ select{
     padding-right: 2.8rem;
     line-height: 2.3rem;
 }
-@media only screen and (max-width:672px)
+#botones{
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 2;
+  
+    align-items: center;
+
+}
+#submit-error-div{
+    grid-column-start: 5;
+    grid-column-end: 9;
+    text-align: center;
+}
+i{
+    color:green;
+}
+@media only screen and (max-width:680px)
 {
       .secundario{
             display: flex;

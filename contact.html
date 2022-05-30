@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/844a4f6069.js" crossorigin="anonymous"></script>
     <script defer src="./js/app.js"></script>
 </head>
 <body>
@@ -21,7 +22,7 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="catalogo.html">Productos</a></li>
-                    <li><a href="contact.html">Contacto</a></li>            
+                    <li><a href="contact.html" >Contacto</a></li>            
                 </ul>
             </nav>
         </div>
@@ -35,18 +36,26 @@
         </select>
     </section>
     <section class="secundario">
-        <div id="preguntas">
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Escriba aqui su nombre" maxlength="30" autocomplete="off" >
-            <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido" id="apellido" placeholder="Escriba aqui su apellido" maxlength="30" autocomplete="off" >
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email" placeholder="Escriba aqui su email" maxlength="30" autocomplete="off" >
-            <label for="telefono">Telefono:</label>
-            <input type="number" name="telefono" id="telefono" placeholder="Escriba aqui su numero de telefono (opcional)" maxlength="30" autocomplete="off" >
-            <label for="consulta">Escriba aqui su consulta:</label>
-            <textarea name="consulta" id="consulta" cols="50" rows="10"></textarea>
-        </div>
+          
+            <div id="preguntas">
+                <form method="post" action="./index.html" name="form-consutla" id="form-consulta" >
+                    <label for="nombre">Nombre completo:</label>
+                    <span id="nombre-error-consulta"></span>
+                    <input type="text" name="nombre" id="nombre-consulta" onkeyup="validarnombre('consulta');" placeholder="Escriba aqui su nombre" maxlength="30" autocomplete="off" >
+                    <label for="apellido">Apellido:</label>
+                    <span id="apellido-error-consulta"></span>
+                    <input type="text" name="apellido" id="apellido-consulta" onkeyup="validarapellido('consulta');" placeholder="Escriba aqui su apellido" maxlength="30" autocomplete="off" >
+                    <label for="email">Email:</label>
+                    <span id="email-error-consulta"></span>
+                    <input type="text" name="email" id="email-consulta" placeholder="Escriba aqui su email" onkeyup="validaremail('consulta');" maxlength="30" autocomplete="off" >  
+                    <label for="telefono">Telefono (opcional):</label>
+                    <span id="telefono-error"></span>
+                    <input type="number" name="telefono" id="telefono" onkeyup="validartelefono();" placeholder="54911151234567" maxlength="30" autocomplete="off" >
+                    <label for="consulta-box">Escriba aqui su consulta:</label>
+                    <span id="consulta-error"></span>
+                    <textarea name="consulta-box" id="consulta-box" cols="50" rows="10" onkeyup="validarconsulta();"></textarea> 
+                </form>
+            </div>      
         <aside id="asidepreguntas">
             <h2>Preguntas Frecuentas:</h2>
             <p><h3>¿Medios de pago?</h3>Pueder ser con tarjeta de credito a travez de paypal o mediate transferencia bancaria.</p>
@@ -54,22 +63,27 @@
             <p><h3>¿Medios de contacto?</h3>Siempre puedes contactarnos atravez de email, telefono y canales de tradeo con tu asesor para que resuelva tus dudas. Al mismo tiempo en esta misma pagina en la seccion de contacto con la accion a realizar, Informacion de contacto, se encuntra la informacion par el canal general.</p>
         </aside>
         <div id="contratar">
-            <h3>Categoria:</h3>
-            <ul id="ul-suscripcion" onchange=" modificacionsuscripcion();">
-                <li><input type="radio" name="categoria" value="F" /> Free</li>
-                <li><input type="radio" name="categoria" value="P" /> Vip Group</li>
-            </ul>
-            <label for="nombre">Nombre completo:</label>
-            <input type="text" name="nombre" id="nombre" placeholder="Escriba aqui su nombre" maxlength="30" autocomplete="off" >
-            <label for="apellido">Apellido:</label>
-            <input type="text" name="apellido" id="apellido" placeholder="Escriba aqui su apellido" maxlength="30" autocomplete="off" >
-            <label for="email">Email:</label>
-            <input type="text" name="email" id="email" placeholder="Escriba aqui su email" maxlength="30" autocomplete="off" >
-            <h3>Metodo de pago:</h3>
-            <ul id="ul-pago">
-                <li><input type="radio" name="pago" value="P" />Paypal</li>
-                <li><input type="radio" name="pago" value="T" />Transferencia</li>
-            </ul>
+            <form method="post" action="./index.html" name="form-consutla" id="form-consulta">
+                <h3>Categoria:</h3>
+                <ul id="ul-suscripcion" onchange="modificacionsuscripcion();">
+                    <li><input type="radio" name="categoria" id="radio-free" value="F"/>Free</li>
+                    <li><input type="radio" name="categoria" id="radio-vip" value="P"/>Vip Group</li>
+                </ul>
+                    <label for="nombre">Nombre completo:</label>
+                    <span id="nombre-error-contratar"></span>
+                    <input type="text" name="nombre" id="nombre-contratar" onkeyup="validarnombre('contratar');" placeholder="Escriba aqui su nombre" maxlength="30" autocomplete="off" >
+                    <label for="apellido">Apellido:</label>
+                    <span id="apellido-error-contratar"></span>
+                    <input type="text" name="apellido" id="apellido-contratar" onkeyup="validarapellido('contratar');" placeholder="Escriba aqui su apellido" maxlength="30" autocomplete="off" >
+                    <label for="email">Email:</label>
+                    <span id="email-error-contratar"></span>
+                    <input type="text" name="email" id="email-contratar" onkeyup="validaremail('contratar');" placeholder="Escriba aqui su email" maxlength="30" autocomplete="off" >
+                    <h3>Metodo de pago:</h3>
+                    <ul id="ul-pago">
+                        <li><input type="radio" name="pago" value="P" />Paypal</li>
+                        <li><input type="radio" name="pago" value="T" />Transferencia</li>
+                    </ul>   
+            </form>
         </div>
         <aside id="izq-contratar">
             <h2>Professional lerner</h2>
@@ -98,12 +112,17 @@
             </div>
             <iframe id="mapa" src="https://maps.google.com/maps?q=Av.%2032%201605,%20B7107%20Santa%20Teresita,%20Provincia%20de%20Buenos%20Aires&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
         </div>
+        <div id="botones">
+            
+                <input type="button" onclick="revisar();" value="Enviar">
+                <div id="submit-error-div">
+                    <span id="nose"></span>
+                </div>
+
+          
+        </div>
         
     </section>
-   
-    
-
- 
     <footer>
         <p>Los productos financieros ofrecidos por la compañía conllevan un alto nivel de riesgo y pueden resultar en la pérdida de todos sus fondos. No debería nunca invertir dinero que no pueda permitirse perder y siempre consulte con su asesor financiero.<br><br>Derechos Reservados 2022 Golback Trading Group</p>
     </footer>

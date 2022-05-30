@@ -67,7 +67,7 @@ body{
     margin-right: 40px;
 }
 
-.boton{
+input[type=submit]{
     min-height: 50px;
     min-width: 200px;
     align-self: center;
@@ -76,12 +76,14 @@ body{
     font-weight: 500;
     background-color: white;
     border: 0.2px solid black;
+    
 }
-.boton:hover{
-    box-shadow: 2.5px 2.5px 2.5px grey;
+input[type=submit]:hover{
+    box-shadow: 2.5px 2.5px 2.5px grey;  
 }
-.boton:active{
-    transform: scale(0.98);
+
+input[type=submit]:active{
+    transform: scale(0.98);   
 }
 .info-plan{
     text-align: left;
@@ -127,7 +129,9 @@ svg{
     width: 120px;
     height: 120px;
 }
-
+ul{
+    list-style-type: none;
+}
 
 @media only screen and (max-width:1020px)
 {
